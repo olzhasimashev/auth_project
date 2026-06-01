@@ -1,0 +1,42 @@
+[
+  {
+    "model": "access_control.role",
+    "pk": 1,
+    "fields": { "name": "Admin", "description": "Администратор системы" }
+  },
+  {
+    "model": "access_control.role",
+    "pk": 2,
+    "fields": { "name": "Manager", "description": "Менеджер по финансам" }
+  },
+  {
+    "model": "access_control.resource",
+    "pk": 1,
+    "fields": { "name": "invoice" }
+  },
+  {
+    "model": "access_control.resource",
+    "pk": 2,
+    "fields": { "name": "analytics" }
+  },
+  {
+    "model": "access_control.action",
+    "pk": 1,
+    "fields": { "name": "read" }
+  },
+  {
+    "model": "access_control.action",
+    "pk": 2,
+    "fields": { "name": "create" }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 1,
+    "fields": { "role": 2, "resource": 1, "action": 1, "is_allowed": true }
+  },
+  {
+    "model": "access_control.accessrule",
+    "pk": 2,
+    "fields": { "role": 2, "resource": 1, "action": 2, "is_allowed": true }
+  }
+]
