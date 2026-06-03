@@ -22,5 +22,7 @@ urlpatterns = [
     # Mock Business Objects
     path('business/invoices/', MockInvoiceListView.as_view(), name='mock-invoices'),
     path('business/analytics/', MockAnalyticsView.as_view(), name='mock-analytics'),
+
+    #Rules
     path('', include(router.urls)),
 ]

@@ -30,6 +30,7 @@ class LogoutView(APIView):
         return Response({"detail": "Успешный выход из системы."}, status=status.HTTP_200_OK)
 
 class ProfileView(generics.RetrieveUpdateAPIView):
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     serializer_class = UserSerializer
 
