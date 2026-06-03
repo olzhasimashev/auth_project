@@ -59,7 +59,7 @@ class AccessRuleViewSet(viewsets.ModelViewSet):
 
 class MockInvoiceListView(APIView):
     
-    permission_classes = [CustomRABACPermission]
+    permission_classes = [IsAdminRole | CustomRABACPermission]
     resource_name = 'invoice' 
 
     def get(self, request):
@@ -74,7 +74,7 @@ class MockInvoiceListView(APIView):
 
 class MockAnalyticsView(APIView):
     
-    permission_classes = [CustomRABACPermission]
+    permission_classes = [IsAdminRole | CustomRABACPermission]
     resource_name = 'analytics'
 
     def get(self, request):
